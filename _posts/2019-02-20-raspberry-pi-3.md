@@ -16,20 +16,20 @@ Como não quero reinventar a roda, seguem os links
 1. Media Center - Plex : [link](https://www.raspberrypi.org/forums/viewtopic.php?t=214655)
 2. Backup Google Drive - RClone : [link](https://github.com/pageauc/rclone4pi/wiki#how-to-configure-a-remote-storage-service)
 3. Automatizar Tarefas - Crontab : [link](https://www.raspberrypi.org/documentation/linux/usage/cron.md)
-   1. No link ele mostra como utilizar a interface gráfica gnome-schedule. Eu preferi fazer por ela, por conta de ser mais fácil.
-   2. Você pode schedular tarefas para o root ou para o usuário PI
+   3.1. No link ele mostra como utilizar a interface gráfica gnome-schedule. Eu preferi fazer por ela, por conta de ser mais fácil.
+   3.2. Você pode schedular tarefas para o root ou para o usuário PI
     ```bash
     # como usuário 
     gnome-schedule -e
     # como root
     sudo gnome-schedule -e
     ```
-   3. No meu caso sempre executei a UI como sudo por conta dos scripts que eram executados
-   4. Adicionei ao final de cada JOB o comando abaixo gerar logs de cada sincronização do rclone
+   3.3. No meu caso sempre executei a UI como sudo por conta dos scripts que eram executados
+   3.4. Adicionei ao final de cada JOB o comando abaixo gerar logs de cada sincronização do rclone
     ```bash
     >> /home/pi/logs/sync-mybook1.log 2>&1
     ```
-   5. Criei uma tarefa para realizar a limpeza no dia 7 de cada mês dos logs
+   3.5. Criei uma tarefa para realizar a limpeza no dia 7 de cada mês dos logs
     ```bash
     # crontab
     0 0 */7 * * su pi -c "rm -f /home/pi/logs/*.log"
@@ -37,17 +37,17 @@ Como não quero reinventar a roda, seguem os links
     su pi -c "rm -f /home/pi/logs/*.log"
     ```
 4. Acesso Remoto - VNC : [link](https://www.raspberrypi.org/forums/viewtopic.php?t=214655)
-   1. Procure por _Set UP VNC_ 
-   2. Não esqueça de criar sua conta : [link](https://www.realvnc.com/en/raspberrypi/)
+   4.1. Procure por _Set UP VNC_ 
+   4.2. Não esqueça de criar sua conta : [link](https://www.realvnc.com/en/raspberrypi/)
 5. NAS - Samba : [link](https://www.arduinoecia.com.br/2016/05/como-instalar-samba-raspberry-pi.html)
-   1. Eu compartilhei as pastas diretamente do HD
+   5.1. Eu compartilhei as pastas diretamente do HD
 6. Client Torrent Web - Transmission [link](http://www.techpi.com.br/2018/04/01/cliente-torrent-na-raspberry-pi/)
 7. HFS e HFS+ no Linux : hfsplus
-   1. Precisei instalar o hfsplus hfsutils e hfsprogs [link](https://www.raspberrypi.org/forums/viewtopic.php?t=60437)
+   7.1. Precisei instalar o hfsplus hfsutils e hfsprogs [link](https://www.raspberrypi.org/forums/viewtopic.php?t=60437)
     ```bash
     sudo apt-get install hfsplus hfsutils hfsprogs
     ```
-   2. Desabilitei o Journaling das partições com HFS [link](https://fosswire.com/post/2007/09/dealing-with-mac-formatted-drives-on-linux/)
+   7.2. Desabilitei o Journaling das partições com HFS [link](https://fosswire.com/post/2007/09/dealing-with-mac-formatted-drives-on-linux/)
     ```bash
     # executei esse comando no mac
     sudo diskutil disableJournal "/Volumes/sdaXsX"
