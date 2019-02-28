@@ -20,7 +20,7 @@ sass:
     style:          :compressed
 
 # Other Params
-include:            [ "robots.txt" ]
+include:            [ "robots.txt","google11f757016dcfbfb9.html" ]
 exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script" ]
 plugins:
   - jekyll-remote-theme
