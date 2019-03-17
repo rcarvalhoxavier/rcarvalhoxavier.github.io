@@ -15,3 +15,7 @@ rcarvalhoxavier (at) gmail.com
 
 ###### Linkedin: 
 [@rcarvalhoxavier](https://www.linkedin.com/in/rcarvalhoxavier/)
+
+##### GitHub
+[@rcarvalhoxavier](https://github.com/rcarvalhoxavier)
+[@gist](https://gist.github.com/rcarvalhoxavier)
