@@ -5,7 +5,7 @@ author_name:        "Rodrigo Xavier" # change this to your name
 logo_url:           https://avatars1.githubusercontent.com/u/794140?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
 
 # Site Settings
-url:                https://rcarvalhoxavier.github.io # main url
+url:                https://rcarvalhoxavier.dev # main url
 baseurl:            
 permalink:          /:title # Post permalink
 timezone:           America/Sao_Paulo # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
